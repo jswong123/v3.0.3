@@ -1,0 +1,262 @@
+#honorPanel[hidden]{display:none!important}#honorPanel{position:fixed;inset:0;z-index:99990;background:radial-gradient(circle at 50% 20%,#34362e,#0c1117 80%);color:#eee;overflow:auto;font-family:"Noto Serif SC","SimSun",serif}.honor-shell{max-width:1500px;margin:auto;padding:clamp(16px,3vw,44px)}.honor-header{display:flex;justify-content:space-between;gap:18px;align-items:center;border-bottom:1px solid #9b804c;padding-bottom:20px}.honor-header small{letter-spacing:3px;color:#c7ad75}.honor-header h2{font-size:clamp(26px,3vw,44px);margin:8px 0}.honor-header p{color:#a9a9a1}.honor-shell button{cursor:pointer;color:#eee;background:#222d36;border:1px solid #776747;border-radius:5px;padding:11px 18px}.honor-shell button:hover,.honor-item.selected{border-color:#e5c67b;background:#30382f}.honor-progress{margin:22px 0;color:#d6bd88}.honor-bar{margin-top:10px;height:6px;background:#303438}.honor-bar i{display:block;height:100%;background:#c4a15a}.honor-layout{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:24px}.honor-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;align-content:start}.honor-item{display:flex;align-items:center;flex-direction:column;min-height:220px;gap:10px}.honor-item small{color:#a9a9a9}.honor-item.locked .honor-medal{filter:grayscale(1);opacity:.55}.honor-detail{background:#141d23;border:1px solid #75623c;text-align:center;padding:24px;display:flex;align-items:center;flex-direction:column}.honor-detail h3{font-size:27px;margin:15px 0 3px}.honor-subtitle{color:#c7ac72}.honor-rule,.honor-status{padding:18px 0;border-top:1px solid #394047;width:100%;line-height:1.8}.honor-disclaimer{font-size:12px;color:#999}.honor-footer{display:flex;gap:12px;margin-top:20px}.honor-medal{position:relative;width:210px;height:210px;display:grid;place-items:center;isolation:isolate;flex-shrink:0}.honor-medal.mini{width:124px;height:124px}.honor-rays{position:absolute;inset:3%;background:repeating-conic-gradient(from 0deg,#a3772f 0 9deg,#e6cb7d 9deg 16deg,#75521f 16deg 24deg);clip-path:polygon(50% 0%,61% 25%,85% 15%,75% 39%,100% 50%,75% 61%,85% 85%,61% 75%,50% 100%,39% 75%,15% 85%,25% 61%,0 50%,25% 39%,15% 15%,39% 25%);filter:drop-shadow(0 5px 4px #000)}.honor-medal-core{width:69%;height:69%;z-index:1;border-radius:50%;border:7px double #edcf7a;box-shadow:0 0 0 3px #6b461c,inset 0 0 14px #111,0 8px 15px #0009;background:radial-gradient(circle at 35% 20%,#b63c36,#631f24 70%);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;text-align:center;padding:6px}.honor-medal-icon{font-size:56px;color:#f4d582;text-shadow:1px 2px 2px #211}.honor-medal-text{font-weight:bold;font-size:15px;letter-spacing:1px;color:#ffe7a6}.mini .honor-medal-icon{font-size:32px}.mini .honor-medal-text{font-size:10px}.modern .honor-medal-core{background:radial-gradient(circle at 35% 20%,#385e6b,#152e43 75%)}.europe .honor-medal-core{background:radial-gradient(circle at 35% 20%,#a64b36,#582323 75%)}.tactical .honor-medal-core{background:radial-gradient(circle at 35% 20%,#57705d,#263d32 75%)}.honor-toast{position:fixed;right:24px;top:24px;z-index:99999;background:#182c2c;border:2px solid #d8ba75;padding:20px 28px;color:#f8e7b7;box-shadow:0 10px 30px #0008}@media(max-width:850px){.honor-layout{grid-template-columns:1fr}.honor-detail{min-height:300px}.honor-header{align-items:flex-start}.honor-gallery{grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}}
+
+/* 第二阶段：独立矢量勋章、绶带及双面陈列 */
+.honor-medal{width:230px;height:255px;max-width:100%;}.honor-medal.mini{width:128px;height:143px}.honor-svg{display:block;width:100%;height:100%;overflow:visible;transition:transform .25s ease,filter .25s ease}.honor-item:hover .honor-svg{transform:translateY(-4px) scale(1.04)}.honor-flip{display:flex;flex-direction:column;align-items:center;gap:4px;background:transparent!important;border:0!important;padding:0!important}.honor-flip span{font-size:12px;color:#c9b681}.honor-flip:hover .honor-svg{transform:rotateY(12deg)}.honor-motif{font-size:13px;color:#c9c3ae}.honor-item.locked .honor-svg{filter:grayscale(1) brightness(.65)}.honor-detail .honor-medal{margin-bottom:6px}@media(max-width:850px){.honor-medal{width:190px;height:210px}.honor-medal.mini{width:110px;height:124px}}
+
+/* 50枚勋章图鉴：分类导航与滚动陈列 */
+.honor-categories{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}.honor-categories button{padding:8px 13px;font-size:13px}.honor-categories button.active{border-color:#e5c67b;background:#4b4431;color:#f6db98}.honor-gallery{grid-template-columns:repeat(auto-fill,minmax(145px,1fr));max-height:65vh;overflow:auto;padding:5px;scrollbar-color:#85744d #1b2529}.honor-item{min-height:210px;padding:10px!important}.honor-item strong{font-size:14px}.honor-detail{position:sticky;top:12px;align-self:start}@media(max-width:850px){.honor-gallery{max-height:none}.honor-detail{position:static}}
+
+/* Historical decorations catalogue: neutral placeholders until artifact images are verified. */
+.history-medal-placeholder,.history-medal-large{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:7px;background:linear-gradient(145deg,#343d48,#161e28);border:2px solid #8b806b;color:#d8c9a8;border-radius:50%;margin:8px auto;width:100px;height:100px;font-family:serif}.history-medal-placeholder strong{font-size:15px}.history-medal-large{width:200px;height:200px;margin:16px auto 24px}.history-medal-large strong{font-size:30px}.history-medal-large small{font-size:12px}
+
+/* Historical honors: researched prototype drawings and ribbon bars below medals */
+.history-art{width:118px;height:118px;filter:drop-shadow(0 6px 6px #0008)}.history-art.mini{width:108px;height:108px}.history-art-large .history-art{width:230px;height:230px}.history-ribbon{position:relative;width:90px;height:24px;background:var(--ribbon-color);border:2px solid #c6b98c;box-shadow:inset 0 2px 4px #0008,0 3px 7px #0006;margin:5px auto 2px}.history-ribbon i{position:absolute;top:0;bottom:0;width:5px;background:#e5c45b;transform:translateX(-50%)}.history-ribbon-note{font-size:10px!important;color:#d0bc8e}.history-ribbon-unknown{font-size:11px;color:#b1a48d;border:1px dashed #6b6559;padding:4px 9px;margin:7px auto}.history-ribbon-detail{width:100%;padding:10px;border-bottom:1px solid #554c3c;display:flex;align-items:center;flex-direction:column;gap:5px}.history-ribbon-detail .history-ribbon{width:130px;height:32px}.honor-item:has(.history-art){min-height:258px}.honor-item:has(.history-art) strong{line-height:1.4}
+
+/* Historical honors: country / second-level category navigation */
+.honor-subcategories{border-top:1px solid rgba(225,195,130,.2);padding-top:8px;flex-wrap:wrap;}
+.honor-subcategories button{font-size:13px;}
+
+/* China gallery: photographic artifact slots, never invented medal patterns. */
+.history-art-unverified{width:116px;height:116px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;background:radial-gradient(circle,#27313a,#111820);border:1px dashed #87734f;border-radius:9px;color:#d0b985;box-shadow:inset 0 0 25px #0008}.history-art-unverified b{font-size:16px}.history-art-unverified small{font-size:11px;color:#a69c89}.history-art-large .history-art-unverified{width:230px;height:230px;margin:0 auto}.history-art-photo{width:118px;height:118px;object-fit:contain;filter:drop-shadow(0 5px 8px #0009)}.history-art-large .history-art-photo{width:230px;height:230px}.history-ribbon-photo img{display:block;width:110px;max-height:45px;object-fit:contain}.honor-item:has(.history-art-unverified){min-height:245px}.honor-detail{min-width:0}.honor-subcategories button.active,.honor-series button.active{background:#514329;color:#f3d48d}
+
+/* China museum: expanded full-height scrollable galleries; no artificial 65vh cutoff. */
+#honorPanel .honor-shell{max-width:1700px;min-height:100vh;box-sizing:border-box;padding-bottom:30px}
+#honorPanel .honor-layout{min-height:calc(100vh - 310px);align-items:stretch;grid-template-columns:minmax(0,1fr) 340px}
+#honorPanel .honor-gallery{max-height:none;min-height:calc(100vh - 310px);overflow:visible;align-content:start;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+#honorPanel .honor-detail{position:sticky;top:18px;align-self:start;max-height:calc(100vh - 36px);overflow-y:auto;box-sizing:border-box}
+#honorPanel .honor-item{min-height:260px}
+#honorPanel .history-photo-wrap{min-height:120px;display:grid;place-items:center}
+#honorPanel .history-art-photo{width:116px;height:125px;object-fit:contain}
+#honorPanel .history-art-large .history-art-photo{width:260px;height:270px}
+#honorPanel .history-ribbon-photo{min-height:30px;display:grid;place-items:center}
+#honorPanel .history-ribbon-photo img{width:115px;height:36px;max-height:none;object-fit:contain}
+#honorPanel .history-ribbon-detail .history-ribbon-photo img{width:155px;height:52px}
+@media(max-width:900px){#honorPanel .honor-layout{grid-template-columns:1fr;min-height:0}#honorPanel .honor-gallery{min-height:0}#honorPanel .honor-detail{position:static;max-height:none}}
+
+/* Historical ribbon-only gallery; original gameplay medals remain untouched. */
+.honor-gallery .history-ribbon-only-card {min-height:95px;display:flex;align-items:center;justify-content:center;width:100%;padding:14px 5px;}
+.honor-gallery .history-ribbon-only-card .history-ribbon-photo {width:100%;display:flex;justify-content:center;align-items:center;}
+.honor-gallery .history-ribbon-only-card .history-ribbon-photo img {display:block;width:min(100%,180px);height:auto;max-height:68px;object-fit:contain;}
+.honor-ribbon-only-detail .history-ribbon-detail {padding:30px 8px 24px;}
+.honor-ribbon-only-detail .history-ribbon-detail .history-ribbon-photo img {display:block;width:min(100%,300px);height:auto;max-height:120px;object-fit:contain;margin:18px auto;}
+.honor-ribbon-only-detail .history-ribbon-detail strong {display:block;text-align:center;}
+
+/* Expanded historical information sidebar */
+.honor-ribbon-only-detail{overflow-y:auto;max-height:calc(100vh - 215px);scrollbar-width:thin;}
+.honor-info-section{text-align:left;border-top:1px solid rgba(195,164,106,.27);padding:15px 3px 11px;line-height:1.75;}
+.honor-info-section h4{color:#d9bb7e;margin:0 0 8px;font-size:15px;}
+.honor-info-section p{margin:0;color:#e0e3e5;font-size:13px;}
+.honor-info-section small{display:block;margin-top:9px;color:#a9b0b8;font-size:11px;}
+
+/* 勋略完成进度条 */
+#honorPanel .honor-progress{width:100%;margin:10px 0 2px;text-align:left;box-sizing:border-box}
+#honorPanel .honor-progress-label{display:flex;align-items:center;justify-content:space-between;gap:8px;color:#bfc7ce;font-size:10px;margin-bottom:5px}
+#honorPanel .honor-progress-label span:last-child{text-align:right}
+#honorPanel .honor-progress-track{height:6px;border-radius:5px;background:#101923;border:1px solid #58636c;overflow:hidden}
+#honorPanel .honor-progress-track>span{display:block;height:100%;background:linear-gradient(90deg,#8d7a49,#e1bd65);border-radius:5px;transition:width .25s ease}
+#honorPanel .honor-progress-detail{margin:14px 0;padding:10px 0;border-top:1px solid rgba(195,164,106,.27)}
+#honorPanel .honor-progress-detail .honor-progress-label{font-size:13px}
+#honorPanel .honor-progress-detail .honor-progress-track{height:10px}
+
+/* 右下角授予提示，不遮挡主界面主要区域 */
+.frontline-medal-toast{position:fixed;right:20px;bottom:20px;width:min(340px,calc(100vw - 32px));min-height:96px;z-index:2147483000;background:linear-gradient(135deg,#192638,#27344a);color:#f6edda;border:1px solid #c6a96a;border-radius:12px;box-shadow:0 12px 35px #0009;padding:14px 38px 14px 16px;box-sizing:border-box;font-family:inherit;animation:frontlineMedalAppear .24s ease-out}.frontline-medal-toast-title{color:#e7c67f;font-weight:700;font-size:13px;margin-bottom:9px}.frontline-medal-toast-body{display:flex;align-items:center;gap:12px}.frontline-medal-toast-body img{width:84px;height:40px;object-fit:contain;flex-shrink:0}.frontline-medal-toast-body strong{display:block;font-size:15px;line-height:1.35}.frontline-medal-toast-body small{display:block;margin-top:5px;font-size:11px;opacity:.8}.frontline-medal-toast-close{position:absolute;right:9px;top:7px;background:transparent;border:0;color:#eee;font-size:22px;cursor:pointer}@keyframes frontlineMedalAppear{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}@media(max-width:600px){.frontline-medal-toast{right:10px;bottom:10px}}
+
+/* v2.8.9: medal-only cards (German Cross) — prevent full-resolution overflow */
+#honorPanel .honor-item .history-ribbon-only-card{width:100%;max-width:100%;min-width:0;overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:85px}
+#honorPanel .honor-item .history-medal-photo{width:100%;max-width:100%;display:flex;align-items:center;justify-content:center;overflow:hidden}
+#honorPanel .honor-item .history-medal-photo img{display:block;width:auto!important;height:auto!important;max-width:94px!important;max-height:94px!important;object-fit:contain!important;margin:auto}
+#honorPanel .honor-detail .history-medal-photo{width:100%;max-width:100%;display:flex;align-items:center;justify-content:center;overflow:hidden;margin:14px auto}
+#honorPanel .honor-detail .history-medal-photo img{display:block;width:auto!important;height:auto!important;max-width:190px!important;max-height:190px!important;object-fit:contain!important;margin:auto}
+
+/* 统一第一层级：玩家自定义勋表展示架 */
+#honorPanel .honor-top-level{margin:12px 0 14px;border-bottom:1px solid #796b50;padding-bottom:10px}
+#honorPanel .honor-rack-section{padding:8px 16px 35px;color:#e9e2d4}
+#honorPanel .honor-rack-section h3{font-size:17px;color:#e6c680;margin:18px 0 12px}
+#honorPanel .honor-rack-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+#honorPanel .honor-rack-card{min-width:0;background:#222d36;border:1px solid #827451;border-radius:5px;text-align:center;padding:12px;display:flex;flex-direction:column;align-items:center;gap:9px}
+#honorPanel .honor-rack-card strong{font-size:13px;min-height:38px}
+#honorPanel .honor-rack-card small{color:#aaa}
+#honorPanel .honor-rack-art{height:98px;width:100%;display:flex;align-items:center;justify-content:center;overflow:hidden}
+#honorPanel .honor-rack-art img{max-width:125px!important;max-height:90px!important;width:auto!important;height:auto!important;object-fit:contain}
+#honorPanel .honor-rack-actions{display:flex;gap:5px;flex-wrap:wrap;justify-content:center}
+#honorPanel .honor-rack-actions button,#honorPanel .honor-rack-picker button{background:#263540;color:#f2e6ce;border:1px solid #84734f;border-radius:4px;padding:6px 10px;cursor:pointer}
+#honorPanel .honor-rack-picker{display:flex;gap:8px;flex-wrap:wrap;max-height:230px;overflow:auto}
+#honorPanel .honor-rack-empty{padding:30px 0;color:#b9c2c9}
+
+/* v2.9.4 · realistic ribbon rack in an illuminated display room */
+#honorPanel .honor-room-shell{max-width:1700px}
+#honorPanel .honor-room{position:relative;isolation:isolate;min-height:570px;overflow:hidden;border:1px solid #63573e;background:linear-gradient(90deg,#13191b 0%,#32332d 48%,#13191b 100%);perspective:1100px;box-shadow:inset 0 0 130px #000b,0 20px 60px #0009}
+#honorPanel .room-ceiling{position:absolute;inset:0 0 auto;height:55px;background:linear-gradient(#0c1114,#262727 65%,transparent);box-shadow:0 7px 20px #0008;z-index:1;pointer-events:none}
+#honorPanel .room-wall{position:relative;min-height:500px;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:70px 20px 65px;box-sizing:border-box;background:repeating-linear-gradient(90deg,transparent 0 24%,#0002 24.1% 24.2%,transparent 24.3% 25%);z-index:2}
+#honorPanel .room-title{color:#d8bf89;font-size:12px;letter-spacing:5px;margin:0 0 20px;text-shadow:0 2px 7px #000}
+#honorPanel .room-frame{position:relative;z-index:3;max-width:100%;padding:18px;border:12px ridge #684c2c;background:linear-gradient(125deg,#a17a44,#34251a 32%,#8a6338 75%,#241c16);box-shadow:0 8px 2px #120e0a,0 18px 35px #000c,inset 0 0 0 2px #c69c57;transform:rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));transition:transform .16s ease;will-change:transform}
+#honorPanel .honor-room[data-material="black"] .room-frame{border-color:#24272b;background:linear-gradient(130deg,#5c6063,#111315,#4b5052)}
+#honorPanel .honor-room[data-material="bronze"] .room-frame{border-color:#85643a;background:linear-gradient(130deg,#b48a52,#4e3b2a,#96734c)}
+#honorPanel .room-velvet{position:relative;min-width:min(620px,72vw);min-height:135px;max-width:min(980px,85vw);box-sizing:border-box;padding:24px 30px 30px;background:radial-gradient(ellipse at 40% 15%,#273b4b,#101e2b 65%,#0b151e);border:2px solid #b4935e;box-shadow:inset 0 0 38px #000c,inset 0 2px 12px #e9d5a81a}
+#honorPanel .room-glass{position:absolute;inset:0;z-index:5;pointer-events:none;background:linear-gradient(115deg,transparent 22%,#fff1 27%,transparent 34%,transparent 75%,#fff1 80%,transparent 84%);opacity:.55}
+#honorPanel .room-plaque{text-align:center;letter-spacing:3px;color:#ddc58e;font-size:12px;margin-bottom:22px}
+#honorPanel .rack-ribbon-grid{display:grid;grid-template-columns:repeat(var(--rack-columns),minmax(0,1fr));gap:5px;max-width:760px;margin:0 auto;justify-content:center}
+#honorPanel .rack-ribbon{position:relative;aspect-ratio:3.15/1;min-width:0;border:2px solid #a58b59;background:linear-gradient(#30343a,#181e23);box-shadow:0 3px 4px #000c,inset 0 1px 1px #fff4;overflow:hidden;cursor:grab}
+#honorPanel .rack-ribbon img{width:100%;height:100%;object-fit:fill;display:block}
+#honorPanel .rack-ribbon-error{background:#4b3434}
+#honorPanel .rack-ribbon-error:after{content:'图片缺失';font-size:11px;position:absolute;inset:0;display:grid;place-items:center;color:#eee}
+#honorPanel .rack-remove-mini{position:absolute;right:0;top:0;padding:0 5px!important;background:#641f1f!important;border:0!important;z-index:3}
+#honorPanel .rack-empty-note{grid-column:1/-1;text-align:center;color:#cbbd9c;font-size:14px;padding:18px 0}
+#honorPanel .rack-badge-row{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;border-top:1px solid #8a764e;margin-top:20px;padding-top:15px}
+#honorPanel .rack-badge{position:relative;max-width:100px}.rack-badge .history-medal-photo img{width:70px!important;height:70px!important;object-fit:contain}.rack-badge button{font-size:11px;padding:4px!important}
+#honorPanel .room-caption{margin-top:18px;color:#b8aa90;font-size:12px;letter-spacing:2px}
+#honorPanel .room-floor{position:absolute;bottom:0;left:0;right:0;height:85px;background:linear-gradient(#302c26,#101315);transform:perspective(200px) rotateX(16deg);transform-origin:bottom;box-shadow:0 -9px 25px #0009;pointer-events:none}
+#honorPanel .room-spotlight{position:absolute;top:-12px;width:42%;height:92%;background:linear-gradient(#ffdfa12a,transparent 90%);clip-path:polygon(46% 0,54% 0,100% 100%,0 100%);filter:blur(15px);pointer-events:none;z-index:1}
+#honorPanel .room-spotlight-left{left:7%;transform:rotate(9deg)}#honorPanel .room-spotlight-right{right:7%;transform:rotate(-9deg)}
+#honorPanel .honor-room[data-light="cool"] .room-spotlight{background:linear-gradient(#b9dbff30,transparent 90%)}
+#honorPanel .honor-room[data-light="off"] .room-spotlight{display:none}
+#honorPanel .rack-controls{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:17px 5px;border-bottom:1px solid #75674e}
+#honorPanel .rack-controls label{color:#d7c49c;font-size:13px}#honorPanel .rack-controls select{margin-left:7px;background:#222d36;color:#f3e6cb;border:1px solid #8b764f;border-radius:4px;padding:8px}
+#honorPanel .rack-edit-panel{padding:16px;background:#19232a;border:1px solid #65583d;margin-top:16px}#honorPanel .rack-edit-panel p{font-size:13px;color:#b8b8b8}
+#honorPanel .rack-picker{display:flex;gap:8px;flex-wrap:wrap;max-height:200px;overflow:auto}#honorPanel .rack-picker button{font-size:12px;padding:8px}
+#honorPanel .rack-edit-order{margin-top:18px;display:grid;gap:6px}#honorPanel .rack-edit-order>div{display:flex;align-items:center;gap:7px;border-bottom:1px solid #46515a;padding:4px}#honorPanel .rack-edit-order span{flex:1;font-size:13px}#honorPanel .rack-edit-order button{padding:5px 10px}
+@media(max-width:720px){#honorPanel .honor-room{min-height:390px}#honorPanel .room-wall{min-height:350px;padding:50px 8px}#honorPanel .room-frame{padding:7px;border-width:6px}#honorPanel .room-velvet{min-width:0;width:calc(100vw - 90px);padding:12px 10px}#honorPanel .rack-ribbon-grid{gap:2px}#honorPanel .room-title{font-size:9px;letter-spacing:2px}}
+@media(prefers-reduced-motion:reduce){#honorPanel .room-frame{transition:none;transform:none!important}}
+
+/* v2.9.3 museum reference reproduction: carved walnut wall, red velvet, warm gallery spots */
+#honorPanel .museum-room{height:auto;min-height:610px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(ellipse at 50% 30%,#34241b 0%,#170f0d 55%,#0c0909 100%);border:1px solid #6c4526;box-shadow:inset 0 0 100px #000,0 18px 35px #000b;perspective:1400px}
+#honorPanel .museum-wall-panels{position:absolute;inset:28px 0 0;background:repeating-linear-gradient(90deg,transparent 0,transparent 17%,#0b0807aa 17.15%,#9b5d2926 17.45%,#110b08 17.75%,transparent 18.1%,transparent 33.33%),linear-gradient(90deg,#140b09,#3d2519 24%,#281710 50%,#3c2418 75%,#120b09);box-shadow:inset 0 18px 40px #000d,inset 0 -30px 30px #000b;pointer-events:none}
+#honorPanel .museum-cornice{position:absolute;top:0;left:0;right:0;height:31px;background:linear-gradient(#0d0907 0 18%,#5e3217 22%,#c18a3b 28%,#21110b 38%,#3b2013 62%,#0c0807 100%);box-shadow:0 9px 15px #000e;z-index:4;pointer-events:none}
+#honorPanel .museum-baseboard{position:absolute;bottom:0;left:0;right:0;height:33px;background:linear-gradient(#080605,#a27035 12%,#28150c 20%,#140b09 65%,#080606);box-shadow:0 -8px 18px #000a;pointer-events:none;z-index:4}
+#honorPanel .museum-wing{position:absolute;top:65px;bottom:34px;width:13%;max-width:165px;border:7px ridge #402516;box-shadow:inset 0 0 0 2px #aa6b2a,inset 0 0 40px #000;display:grid;place-items:center;color:#a6792c;font-size:45px;text-shadow:0 2px 5px #000;z-index:2;pointer-events:none}
+#honorPanel .wing-left{left:2%}#honorPanel .wing-right{right:2%}
+#honorPanel .museum-exhibits{position:relative;z-index:3;width:min(74%,1040px);padding:80px 0 60px;display:flex;flex-direction:column;align-items:stretch;gap:24px;pointer-events:auto}
+#honorPanel .museum-case{position:relative;padding:13px;border:9px ridge #a67537;background:linear-gradient(135deg,#bd904f,#24140b 25%,#a36e32 60%,#3c2312);box-shadow:0 8px 0 #1c100a,0 16px 23px #000e,inset 0 0 0 2px #e4b968;transform:rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));transition:transform .15s ease;min-width:0}
+#honorPanel .museum-case:before{content:'';position:absolute;inset:3px;border:1px solid #f2c46c;pointer-events:none;z-index:3}
+#honorPanel .museum-case-glass{position:absolute;inset:12px;pointer-events:none;z-index:3;background:linear-gradient(120deg,transparent 10%,#ffffff09 24%,transparent 35%,transparent 72%,#ffffff0a 82%,transparent 92%)}
+#honorPanel .museum-corner{position:absolute;color:#e4b457;text-shadow:0 1px 2px #160e08;font-size:28px;z-index:5;line-height:1;pointer-events:none}.museum-corner.corner-tl{top:0;left:0}.museum-corner.corner-tr{top:0;right:0;transform:scaleX(-1)}.museum-corner.corner-bl{bottom:0;left:0;transform:scaleY(-1)}.museum-corner.corner-br{bottom:0;right:0;transform:scale(-1)}
+#honorPanel .museum-velvet{position:relative;min-height:90px;padding:24px 30px;background:radial-gradient(ellipse at 50% 12%,#920f20 0%,#670916 38%,#36050b 85%,#200407 100%);border:2px solid #ac793b;box-shadow:inset 0 0 36px #100003e8,inset 0 4px 8px #ffffff0d}
+#honorPanel .museum-ribbon-case .museum-velvet{min-height:112px;display:flex;align-items:center;justify-content:center}
+#honorPanel .museum-ribbon-case .rack-ribbon-grid{width:min(100%,780px);gap:4px}
+#honorPanel .museum-medal-case .museum-velvet{min-height:128px;display:flex;align-items:center;justify-content:center}
+#honorPanel .museum-medal-case .rack-badge-row{border:0;margin:0;padding:0;display:flex;align-items:center;justify-content:space-evenly;width:100%;gap:12px}
+#honorPanel .museum-medal-case .rack-badge{max-width:135px;filter:drop-shadow(0 8px 7px #000b)}
+#honorPanel .museum-medal-case .rack-badge .history-medal-photo img{width:auto!important;height:auto!important;max-width:100px!important;max-height:120px!important;object-fit:contain}
+#honorPanel .museum-lamp{position:absolute;top:30px;width:46px;height:12px;background:radial-gradient(ellipse,#fff2bd,#e7a047 45%,#492310 75%,transparent 78%);box-shadow:0 0 14px 5px #ffc46b77,0 3px 12px #f5ad50;z-index:6;pointer-events:none}
+#honorPanel .lamp-one{left:27%}#honorPanel .lamp-two{left:50%;transform:translateX(-50%)}#honorPanel .lamp-three{right:27%}#honorPanel .lamp-side-left{left:6%;top:64px;width:28px;height:7px}#honorPanel .lamp-side-right{right:6%;top:64px;width:28px;height:7px}
+#honorPanel .museum-beam{position:absolute;top:38px;width:32%;height:82%;clip-path:polygon(46% 0,54% 0,100% 100%,0 100%);background:linear-gradient(#ffd58e36,#ffc06b11 45%,transparent);filter:blur(10px);mix-blend-mode:screen;z-index:2;pointer-events:none}
+#honorPanel .beam-one{left:12%}#honorPanel .beam-two{left:34%}#honorPanel .beam-three{right:12%}
+#honorPanel .museum-room[data-light="cool"] .museum-beam{background:linear-gradient(#b7dcff40,transparent)}#honorPanel .museum-room[data-light="cool"] .museum-lamp{box-shadow:0 0 15px 6px #c8e5ff88;background:radial-gradient(ellipse,#fff,#b9d8ef 50%,transparent 78%)}
+#honorPanel .museum-room[data-light="off"] .museum-lamp,#honorPanel .museum-room[data-light="off"] .museum-beam{display:none}
+#honorPanel .museum-room[data-material="black"] .museum-case{border-color:#2e2b2b;background:linear-gradient(135deg,#79716a,#161412,#554f4b)}#honorPanel .museum-room[data-material="bronze"] .museum-case{border-color:#91602c;background:linear-gradient(135deg,#b78b54,#39281a,#987145)}
+@media(max-width:850px){#honorPanel .museum-room{min-height:450px}#honorPanel .museum-exhibits{width:87%;padding:66px 0 46px;gap:16px}#honorPanel .museum-wing{display:none}#honorPanel .museum-velvet{padding:16px 12px}#honorPanel .museum-case{border-width:6px;padding:8px}#honorPanel .museum-medal-case .rack-badge .history-medal-photo img{max-width:70px!important;max-height:90px!important}}
+@media(prefers-reduced-motion:reduce){#honorPanel .museum-case{transform:none!important;transition:none!important}}
+
+/* v2.9.3 realistic carved wood and wheat-ear corner details */
+#honorPanel .museum-room{background:radial-gradient(ellipse at 50% 22%,#59311c55,transparent 70%),repeating-linear-gradient(93deg,#160b07 0px,#3c2012 8px,#4b2918 11px,#2b170e 18px,#613a21 23px,#24130b 29px,#3b2012 37px,#160b07 48px)!important}
+#honorPanel .museum-wall-panels{background:repeating-linear-gradient(90deg,transparent 0%,#09050488 0.4%,transparent 1.1%,transparent 17%,#09050499 17.2%,#a8733a55 17.5%,#08050499 18%,transparent 18.5%,transparent 33.33%),repeating-linear-gradient(91deg,#251309 0px,#4d2a16 9px,#7b4525 13px,#351b0d 19px,#5d321a 27px,#241208 35px,#422312 43px,#251309 53px)!important;box-shadow:inset 0 0 90px #000c!important}
+#honorPanel .museum-wing{background:repeating-linear-gradient(92deg,#1b0d07 0px,#542b15 7px,#91532b 10px,#41210f 16px,#6b391c 21px,#241208 29px)!important;border:9px ridge #6c3a1c!important;box-shadow:inset 0 0 0 3px #bd8546,inset 0 0 18px #0009,0 8px 22px #000a!important}
+#honorPanel .museum-wing span{display:none!important}
+#honorPanel .museum-corner{font-size:0!important;width:36px;height:36px;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23dfb96c%22%20stroke-width%3D%222.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M10%2054C28%2043%2041%2027%2052%208%22%2F%3E%3Cpath%20d%3D%22M24%2043C13%2042%2012%2034%2014%2029c7%202%2011%206%2010%2014M31%2035C21%2033%2020%2025%2023%2020c7%204%2010%209%208%2015M39%2026C30%2022%2031%2015%2035%2011c6%205%207%2010%204%2015M27%2040c10%202%2016-3%2018-10-8-1-15%202-18%2010M36%2030c10%201%2015-5%2016-12-7%200-13%204-16%2012%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-size:contain;background-position:center;background-repeat:no-repeat;filter:drop-shadow(0 1px 2px #000a)}
+#honorPanel .museum-corner.corner-tl{top:1px;left:1px}#honorPanel .museum-corner.corner-tr{top:1px;right:1px}#honorPanel .museum-corner.corner-bl{bottom:1px;left:1px}#honorPanel .museum-corner.corner-br{bottom:1px;right:1px}
+#honorPanel .rack-controls button.active{border-color:#dbad60;background:#514029;color:#f8dfad}
+
+/* 荣誉授勋编辑模式：独立弹窗，不干扰勋表/档案的按钮绑定 */
+#honorPanel .honor-header-actions{display:flex;gap:9px;flex-wrap:wrap;justify-content:flex-end}
+.honor-dev-overlay{position:fixed;inset:0;background:#06080cdd;z-index:100200;display:grid;place-items:center;padding:20px;box-sizing:border-box;color:#f3e8d2}
+.honor-dev-dialog{background:#182128;border:1px solid #b89858;box-shadow:0 25px 80px #000c;width:min(1050px,100%);max-height:90vh;overflow:auto;padding:22px;box-sizing:border-box;font-family:"Noto Serif SC",SimSun,serif}
+.honor-dev-dialog header{display:flex;align-items:center;justify-content:space-between;gap:12px}.honor-dev-dialog h3{margin:0;font-size:24px}.honor-dev-dialog p{color:#c7bba5;font-size:13px;line-height:1.7}
+.honor-dev-dialog button,.honor-dev-dialog select,.honor-dev-dialog input{background:#24313b;color:#eee0bd;border:1px solid #8e794e;border-radius:4px;padding:8px;cursor:pointer}
+.honor-dev-dialog input{cursor:text;flex:1;min-width:180px}.honor-dev-filters{display:flex;gap:12px;margin:18px 0}.honor-dev-list{display:flex;flex-direction:column;gap:5px;max-height:58vh;overflow:auto}
+.honor-dev-row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:10px;border-bottom:1px solid #4c514d}.honor-dev-row span{display:grid;gap:5px}.honor-dev-row small{color:#b6afa0}.honor-dev-row>div{display:flex;gap:5px;flex-wrap:wrap}.honor-dev-row button:hover{background:#42513e}
+@media(max-width:720px){.honor-dev-row{align-items:flex-start;flex-direction:column}.honor-dev-filters{flex-wrap:wrap}}
+
+/* v2.9.7: user-provided photorealistic room image as the ACTUAL scene texture.
+   Dynamic ribbon and medal HTML stays live; the photographed central showcases
+   are covered by opaque real-time display cases, avoiding double medals. */
+#honorPanel .museum-room{
+  position:relative!important;min-height:0!important;
+  aspect-ratio:1771 / 600!important;height:auto!important;
+  background:#1d100b url('./assets/room/honor-room-photoreal.png') center 53% / 100% auto no-repeat!important;
+  border:0!important;box-shadow:0 12px 32px #000b!important;
+}
+#honorPanel .museum-wall-panels,#honorPanel .museum-cornice,#honorPanel .museum-baseboard,
+#honorPanel .museum-wing,#honorPanel .museum-lamp,#honorPanel .museum-beam{display:none!important}
+#honorPanel .museum-exhibits{
+  position:absolute!important;z-index:5!important;left:22.15%!important;top:13.7%!important;
+  width:55.3%!important;height:76.8%!important;padding:0!important;
+  display:flex!important;flex-direction:column!important;gap:3.2%!important;
+  align-items:stretch!important;justify-content:stretch!important;
+}
+#honorPanel .museum-case{
+  flex:1 1 0!important;min-height:0!important;box-sizing:border-box!important;
+  padding:8px!important;border:7px ridge #af854e!important;
+  background:#25120c!important;
+  box-shadow:0 0 0 7px #23130c,0 8px 20px #000c,inset 0 0 0 2px #f0c777!important;
+  transform:none!important;
+}
+#honorPanel .museum-ribbon-case{flex:1.34 1 0!important}
+#honorPanel .museum-medal-case{flex:1 1 0!important}
+#honorPanel .museum-velvet{box-sizing:border-box!important;width:100%!important;height:100%!important;min-height:0!important;
+  padding:8px 16px!important;overflow:auto!important;
+  background:radial-gradient(ellipse at 48% 15%,#8a1020 0%,#590612 60%,#2c0308 100%)!important;
+  border:2px solid #b88b4d!important;box-shadow:inset 0 0 26px #170003!important;
+}
+#honorPanel .museum-ribbon-case .rack-ribbon-grid{width:min(100%,720px)!important;gap:3px!important}
+#honorPanel .museum-ribbon-case .rack-ribbon{aspect-ratio:3.35/1!important}
+#honorPanel .museum-medal-case .rack-badge-row{gap:8px!important}
+#honorPanel .museum-medal-case .rack-badge .history-medal-photo img{max-height:110px!important;max-width:100px!important}
+#honorPanel .museum-case-glass{opacity:.25}
+@media(max-width:900px){#honorPanel .museum-room{aspect-ratio:1771/670!important;background-size:auto 100%!important}
+ #honorPanel .museum-exhibits{left:13%!important;width:74%!important;top:14%!important;height:76%!important}
+ #honorPanel .museum-case{border-width:4px!important;padding:4px!important}
+ #honorPanel .museum-velvet{padding:4px!important}
+ #honorPanel .museum-medal-case .rack-badge .history-medal-photo img{max-height:70px!important;max-width:65px!important}}
+
+/* v2.9.7 overlap hotfix: crop source image to furniture only, and
+   cover its baked-in central medals behind the live display cases. */
+#honorPanel .museum-room {
+  aspect-ratio:1771 / 600!important;
+  background-position:center center!important;
+  background-size:100% 100%!important;
+}
+#honorPanel .museum-exhibits {
+  left:22.15%!important;
+  top:12.3%!important;
+  width:55.3%!important;
+  height:81.5%!important;
+  gap:2.2%!important;
+}
+#honorPanel .museum-case {box-shadow:0 4px 12px #000b,inset 0 0 0 2px #f0c777!important}
+@media(max-width:900px) {
+  #honorPanel .museum-room {aspect-ratio:1771 / 600!important;background-size:100% 100%!important}
+  #honorPanel .museum-exhibits {left:22.15%!important;top:12.3%!important;width:55.3%!important;height:81.5%!important}
+}
+
+/* v2.9.7 new user-supplied eight-flag gallery: no baked-in interface text or medals.
+   The live medals are placed INSIDE the photographed empty velvet panels. */
+#honorPanel .museum-room{aspect-ratio:1774/600!important;background-position:center!important;background-size:100% 100%!important}
+#honorPanel .museum-exhibits{left:22.5%!important;top:16.3%!important;width:53.0%!important;height:72.0%!important;gap:9.5%!important}
+#honorPanel .museum-case{border:0!important;padding:0!important;background:transparent!important;box-shadow:none!important;outline:none!important}
+#honorPanel .museum-ribbon-case{flex:1.42 1 0!important}
+#honorPanel .museum-medal-case{flex:1 1 0!important}
+#honorPanel .museum-velvet{border:0!important;padding:7px 10px!important;background:transparent!important;box-shadow:none!important}
+#honorPanel .museum-case-glass{display:none!important}
+@media(max-width:900px){#honorPanel .museum-room{aspect-ratio:1774/600!important;background-size:100% 100%!important}#honorPanel .museum-exhibits{left:22.5%!important;top:16.3%!important;width:53%!important;height:72%!important;gap:9.5%!important}}
+
+
+/* v3.0.2: new 1774x887 user-supplied eight-flag gallery background.
+   Keep existing interactive ribbon and medal display areas aligned to the two velvet panels. */
+#honorPanel .museum-room{
+  aspect-ratio:1774 / 887!important;
+  background-position:center center!important;
+  background-size:100% 100%!important;
+}
+#honorPanel .museum-exhibits{
+  left:22.5%!important;
+  top:32.0%!important;
+  width:52.8%!important;
+  height:49.5%!important;
+  gap:10.5%!important;
+}
+#honorPanel .museum-ribbon-case{flex:1.40 1 0!important}
+#honorPanel .museum-medal-case{flex:1 1 0!important}
+@media(max-width:900px){
+  #honorPanel .museum-room{aspect-ratio:1774 / 887!important;background-size:100% 100%!important}
+  #honorPanel .museum-exhibits{left:22.5%!important;top:32.0%!important;width:52.8%!important;height:49.5%!important;gap:10.5%!important}
+}
